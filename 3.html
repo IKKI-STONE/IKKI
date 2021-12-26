@@ -9,19 +9,28 @@
 
   <body>
     <h1><a href="index.html">IKKI CODING PRACTICES</a></h1>
-    <input type='button' value='day' onclick ="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    ">
-    <input type='button' value='night' onclick ="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
+    <input type="button" value="night" onclick="
+      var target = document.querySelector('body');
+      if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+      }
     ">
     <div id="contents">
       <ol>
         <li><a href="1.html">HOME</a></li>
         <li><a href="2.html">이미지 삽입</a></li>
         <li><a href="3.html">동영상 삽입</a></li>
+        <li><a href="4-1.html">쇼핑몰 화면 만들어보기</a></li>
+          <ol>
+            <li><a href="4-1.html">기획</a></li>
+            <li><a href="4-2.html">실습</a></li>
+          </ol>
       </ol>
       <div id="article">
       <h2>동영상 삽입</h2>
